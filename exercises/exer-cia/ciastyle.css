@@ -1,0 +1,27 @@
+#h1 {
+    color: darkgreen
+}
+.headlineFont{
+    font-family: Georgia;
+    text-align: center;
+}
+
+#paragraphs {
+    line-height: 25px;
+}
+
+#youmight {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+img {
+    float: left;
+    max-width: 100%;
+    height:auto;
+}

@@ -1,0 +1,21 @@
+#body{
+    background-color: #111111;
+}
+#starWarsHeading{
+    color: #E2E80F;
+    text-align: center;
+    font-size: 4em;
+}
+.paragraphClass{
+    color: #eeeeee;
+    font-size: 1.3em;
+    line-height: 1.3; 
+}
+.credits{
+    text-decoration: underline;
+    color: #49DAFF;
+}
+#film-description{
+    font-style: italic;
+    font-size: .8em;
+}

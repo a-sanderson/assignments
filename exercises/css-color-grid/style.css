@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box; 
+    font-size: 0px;
+    box-align: center;
+    
+}
+
+#topBox{
+    background-color:#F5C6D6;
+    width: 80% ;
+    height: 10% ;
+    padding: 5%;
+    border: 8px solid white;
+    
+
+    
+
+}
+.secondRow{
+    background-color: #EE2E84;
+    width: 20%;
+    height: 10%;
+    padding: 5%;
+    border: 8px solid white;
+    display: inline-block;
+    
+}
+.thirdRow{
+    background-color:#85CFD8;
+    width: 40% ; 
+    height: 10% ;
+    padding: 5% ;
+    border: 8px solid white;
+    display: inline-block;
+    
+
+
+}
+
+.fourthRow{
+    background-color:#8DC63F;
+    width: 60%;
+    height: 10%;
+    padding: 5%;
+    border: 8px solid white;
+    display: inline-block;
+    margin: auto;
+
+}
+
+.fifthBox{
+    background-color: #E76E34;
+    width: 20% ;
+    height: 10%;
+    padding: 5%;
+    border: 8px solid white;
+    display: inline-block;
+    margin: auto;
+}

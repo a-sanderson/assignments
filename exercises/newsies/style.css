@@ -1,0 +1,104 @@
+
+body
+
+.titleClass{
+    font-family: cursive;
+    font-style: italic;
+    text-align: center;
+    font-size: 4em;
+    border-style: groove;
+    border-color: rgba(rgb(71, 49, 49), rgb(160, 226, 160), blue, alpha);
+    background-color:rgb(196, 187, 64);
+    margin-left: 
+
+}
+.headlineArticle{
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.paragraphStyle{
+    display: inline-block;
+    width: 320px;
+    align-content: center;
+    margin-left: 2em;
+    line-height: 1.4em;
+    
+}
+
+.starter{
+    font-style: bold;
+    font-family: 'Times New Roman';
+    font-size: 1.3em;
+    font-weight: bold;
+    
+}
+#suspect{
+    font-style: oblique;
+    font-weight: bold;
+
+}
+
+.makeWider{
+    width: 350px;
+    display: inline-block;
+    font-size: 1.2em;
+    margin-left: 8em;
+}
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 120px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: black; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    float:left;
+    
+  }
+.iconStyle {
+    font-family: Helvetica;
+    font-size: 1.3em;
+    color: white;
+    margin-bottom: 1.9em;
+}
+button:hover{
+    color:blue
+}
+.buttonStyle{
+     
+    margin-bottom:2em;
+    margin-top: 2em;
+    font-family: Helvetica;
+    font-size: 1.3em;
+}
+.imageClass{
+    height: 20em;
+    width: 20em;
+    margin-left: 10em;
+
+}
+.scooterImage{
+    display: inline-block;
+    height: 25em;
+    width: 25em;
+
+}
+.weather{
+    display:inline-block;
+    width: .2em;
+    height: .2em;
+
+}
+
+.mainContainer{
+    position: relative;
+}
+.weatherPic{
+    position: absolute;
+    height: 80%;
+    width: 60%;
+
+}
