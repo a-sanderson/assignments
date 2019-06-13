@@ -1,0 +1,93 @@
+/*.hero-image{
+    background-image: url(https://images.unsplash.com/photo-1540508637811-c899c2407bce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .5;
+    z-index: 0;
+}*/
+body{
+    margin:0;
+}
+.hero{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(https://images.unsplash.com/photo-1540508637811-c899c2407bce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+
+}
+.hero h1{
+    font-size: 5em;
+    color: aquamarine;
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+.hero h2{
+    font-style: italic;
+    color: magenta;
+    text-shadow: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: .03em;
+    font-size: 3em
+
+}
+
+#navStyle{
+    background-color:lightgray;
+    padding: 2%;
+    z-index: 1;
+    
+}
+#navList{
+    list-style:none;
+
+
+}
+.fakeLink{
+    display:inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 130%;
+    margin-left: 5em;
+}
+.headingsDiv{
+    text-align: center;
+    
+    
+}
+li:hover{
+    color:white
+} 
+.blog-posts{
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+    height: 100vh;
+    border: 4px solid black;
+    margin-left: 20%
+}
+.image1{
+    background-image: url(http://a2.espncdn.com/photo/2015/0403/MiikaAdamovCrook_DZ.jpg)
+}

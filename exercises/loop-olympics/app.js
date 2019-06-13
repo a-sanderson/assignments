@@ -1,8 +1,8 @@
-/*var num = []
+var num = []
 for(i = 0; i < 10; i++){
     num.push(i)
 }
-console.log(num)*/
+console.log(num)
 
 
 
@@ -115,7 +115,7 @@ matrix[i] = arr
 }
 console.log(matrix)*/
 
-var matrixA = [[1,2,3], [10,17,12,13], [3,6,9,12]]
+/*var matrixA = [[1,2,3], [10,17,12,13], [3,6,9,12]]
 for (i = 0; i < matrixA.length; i++){
     for(j = 0; i< matrixA.length; j++){
         matrixA = [i][j];
@@ -123,4 +123,4 @@ for (i = 0; i < matrixA.length; i++){
 
 }
 
-console.log(matrixA)
+console.log(matrixA)*/

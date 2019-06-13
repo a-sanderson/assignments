@@ -1,0 +1,120 @@
+.hero{
+    background-image: url(https://img.etimg.com/thumb/height-360,width-480,msid-49518254/.jpg);
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border: 5px outset black;
+}
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    font-size: 4em;
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+
+}
+#bob{
+    height: 15em;
+}
+#cheep{
+    height: 15em;
+}
+#goomba{
+    height: 15em;
+}
+
+h2{
+    font-size: 2em;
+    margin-top: 10%
+}
+.priceNumber{
+    display: inline-block;
+    font-size: 10em;
+    margin-left: 20%
+}
+#calculatorBox{
+    align-content: center;
+    display:flex;
+}
+#actualCalc{
+    height: 40vh;
+    width: 70vw;
+    border: 6px firebrick ridge ;
+    margin-left: 45%;
+    margin: auto;
+}
+h3{
+    text-align: center;
+    font-family:sans-serif;
+}
+.baddieworth{
+    display:flex;
+    justify-content: space-evenly
+}
+.coincontainer{
+    display: flex;
+    justify-content: center;
+}
+.imageContainers{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    border-right: 4px black inset;
+    
+}
+.worthStyle{
+    font-size: 250%;
+
+}
+.baddieType{
+    font-size: 250%;
+    text-decoration: underline;
+}
+#mario{
+    height: 100%;
+    width: 100%;
+}
+button{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+#answerBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: auto;
+}
+h4{
+    font-size: 200%
+}
+span{
+    margin-left: 10%
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "stylesheet" href = "style.css">
+    <title>Document</title>
+</head>
+<section class= "travelHeader">
+
+<h1 class = "ronHeading">Ron's Luxury Travel Co</h1>
+<h2 class = "subtitle">Get Outta Town</h2>
+</section>
+<main>
+    <div class = formContainer>
+        <form name = "travelForm" class= "travelForm">
+            <p class = "putName">First, we need your name!</p> 
+            <input  type = "text" name = "firstName" placeholder="First Name"><input type = "text" name = "lastName" placeholder= "Last Name"> 
+            <br>
+            <p id = "age">Please list your age</p>
+            <input type = "number" name = "age" placeholder = "Age Here">
+            <br>
+            <p>Next, We need your gender. Dont worry, Ron's Travel is a non-discriminitory company, used for marketing research purposes only. Feel free to select "Id rather not disclose".</p>
+            <br>
+            Male <input type = "radio" value = "male" name = "gender"/>
+            Female<input type = "radio" value = "female" name = "gender"/>
+            Id rather not disclose<input type = "radio" value= "noDisclosure" name = "gender"/>
+            <br>
+            <p class = "destination" > Where do you wish to travel?</p>
+            <input type = "checkbox" value= "Bali" name = "destination">Bali<br>
+            <input type = "checkbox" value = "cancun" name = "destination">Cancun<br> 
+            <input type = "checkbox" value = "Nepal" name = "destination">Nepal<br> 
+            <p class = "diet">Finally, let us know if you are on any special diets, (We are luxury after all!</p> 
+            <input type = "checkbox" name = "diet">Vegan<br> 
+            <input type = "checkbox" name = "diet">Keto<br> 
+            <input type = "checkbox" name = "diet">No preference<br> 
+            <input type = "submit" class = "submitButton" name = "submit">
+        </form>
+    </div>    
+</main>
+
+<body>
+<script src = "app.js"></script>   
+</body>
+</html>

@@ -1,0 +1,26 @@
+.imageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+.navStyle{
+    top: 12%;
+    position: fixed !important;
+    height: 10%;
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+    z-index: 2;
+    color:white;
+    background-color: khaki;
+    opacity: .8
+}
+.navLinks{
+    border: 6px ridge darkgray;
+    border-radius: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    padding: 1.4%;
+    color: black;
+
+}

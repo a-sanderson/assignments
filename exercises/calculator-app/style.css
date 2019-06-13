@@ -1,0 +1,26 @@
+.calculatorBox{
+    align-content: center;
+    display:inline-block;
+}
+.calculator{
+    border: 7px solid black;
+    height: 70vh;
+    width: 40vw;
+    display: inline-block;
+}
+.add{
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+.subtract{
+    margin-bottom:5%;
+}
+#answerBox{
+    border:5px solid red;
+    height: 8vh;
+    width: 20vw;
+    margin-top: 20%
+}
+h1{
+    color: lime;
+}

@@ -1,0 +1,195 @@
+
+body{
+    margin:0;
+    box-sizing: border-box;
+}
+#homeHeader{
+    background: url(https://images.unsplash.com/photo-1555624504-854efbe25b10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80) no-repeat center center fixed;
+    width: 100vw;
+    height: 100vh;
+    /* justify-content: center; */
+    /* align-items: center; */
+    text-align: center;
+    background-size: cover;
+    /* background-position: top center; */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    filter: grayscale(70%);
+    opacity: .8;
+}
+.homeHeadStyle{
+    color: white;
+    position: relative;
+}
+h1{
+    font-family: "Gill Sans", sans-serif;
+    font-size: 250%;
+}
+.navStyle{
+    /* position: fixed !important; */
+    /* top: 12%; */
+    height: 10%;
+    /* width: 100%; */
+    display:flex;
+    justify-content: space-evenly;
+    /* z-index: 2; */
+    color:white;
+    background-color: khaki;
+    border: 4px ridge lightslategrey;
+}
+.navLinks{
+    border: 6px ridge darkgray;
+    border-radius: 20%;
+    font-family: Tahoma, sans-serif;
+    text-decoration: none;
+    padding: 1.2%;
+    font-size: 110%;
+    font-weight: 500
+}
+a  {
+    color: black;
+    text-decoration: none;
+}
+/*a :hover{
+    color:pink;
+}*/
+#reviewcontainer{
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    height: auto;
+    width: auto;
+    /* width:100vw; */
+    border:8px black ridge;
+}
+
+.reviews{
+    border: 4px beige inset;
+    /* height: 100; */
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: top;
+}
+.reviewStyle{
+    font-family: "verdana";
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 10%;
+    
+}
+.reviewStyle2{
+    font-family: "verdana";
+    font-size: 20px;
+    line-height: 1.4;
+}
+.weCare{
+    grid-column: 3/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: ;
+    align-items: center;
+    margin: auto; 
+    font-style: italic 
+}
+.homeFooter{
+    grid-column: 1/5;
+    grid-row: 2/4;
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+
+
+}
+.logo{
+    left: 0;
+    position:absolute;
+    height: 10%;
+    
+}
+#socialMedia{
+    height: 100px;
+    /* width: 50%; */
+    border: 2px solid;
+    /* position: fixed; */
+    /* top: 0%; */
+    /* right: 0%; */
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 50%;
+}
+.socialSizing{
+    height: 100%;
+}
+.boldText{
+    font-style: bold;
+    font-size: 120%;
+    font-weight: 700;
+}
+.hamburger{
+    display:none;
+    height:100%;
+}
+ul li{
+    display:none;
+}
+#jeradStyle{
+    font-size: 120%;
+    font-style: italic;
+}
+
+
+ @media only screen and (max-width:500px ){
+    #socialMedia{
+        height: 50px;
+    }
+    .navStyle{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .burgerSizing{
+        height:100%;
+    }
+    ul li{
+        display:none;
+    }
+    li:hover > ul,
+    ul li:focus-within > ul, /* this is the line we add */
+    ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    color:white;
+    }
+    #socialMedia{
+        margin:auto;
+    }
+    li{
+        list-style: none;
+    }
+    #reviewContainer{
+        display:flex;
+        flex-direction:column;
+
+    }
+    .weCare{
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
