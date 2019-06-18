@@ -1,0 +1,40 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#todoHeader{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#actualList{
+    grid-column:1/4;
+    border: 4px ridge slategray;
+    display:flex;
+    height: 85vh;
+}
+.listDividers{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px inset beige;
+    margin: 4px;
+    height: 10%;
+    width: 100%;
+}
+#addTodo{
+    grid-column: 1/4;
+    grid-row: 2/3;
+   
+}
+.lineThru{
+    text-decoration: line-through;
+    text-decoration-color: firebrick;
+    color: black;
+}
+.toDoListTitle{
+    color: black;
+    font: arial;
+}

@@ -1,0 +1,111 @@
+#container{
+    height:75vh;
+    width: 75vw;
+    border: 8px black ridge;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+}
+.boxContainer{
+    height: 50%;
+    width: 100%;
+    border: 2px beige solid;
+    display:flex
+}
+#box1{
+    background-color:lightsalmon;
+    height:100%;
+    width: 33%;
+    border: 1.5px solid black;
+    box-shadow: none;
+    position: relative 0 0 0 0;
+    transition:background-color, box-shadow, position, .5s ease-in 500ms;
+}
+#box2{
+    background-color:lightgreen;
+    height:100%;
+    width: 33%;
+    border: 1.5px solid black;
+    box-shadow: none;
+    transition:background-color, box-shadow, .5s ease-out 500ms;
+}
+#box3{
+    background-color: lightgray;
+    height:100%;
+    width: 33%;
+    border: 1.5px solid black;
+    box-shadow: none;
+    margin:auto;
+    transition:background-color, box-shadow, margin .5s ease-in-out 500ms;
+}
+#box4{
+    background-color: lightcyan;
+    height:100%;
+    width: 33%;
+    border: 1.5px solid black;
+    box-shadow: none;
+    transition:background-color, box-shadow, .5s ease-out 500ms;
+}
+#box5{
+    background-color:lightcoral;
+    height:100%;
+    width: 33%;
+    border: 1.5px solid black;
+    box-shadow: none;
+    transition:background-color, box-shadow, .5s ease-in 500ms;
+}
+#box6{
+    background-color: lightseagreen;
+    height:100%;
+    width: 33%;
+    border: 1.5px solid black;
+    box-shadow: none;
+    transition:background-color, box-shadow, .5s ease-out 500ms;
+}
+
+#box1:hover{
+    background-color:lime;
+    height:100%;
+    width: 33%;
+    border: 1.5px solid black;
+    box-shadow: 10px 10px 5px 0;
+    position: absolute;
+    bottom: -80;
+}
+#box2:hover{
+    background-color:hotpink;
+    height:100%;
+    width: 33%;
+    border: 1.5px solid black;
+    box-shadow: 10px 10px 10px 0;
+}
+#box3:hover{
+    background-color: turquoise;
+    height:100%;
+    width: 33%;
+    border: 1.5px solid black;
+    margin: 15px;
+    box-shadow:10px 10px 5px 0;
+}
+#box4:hover{
+    background-color: black;
+    height:100%;
+    width: 33%;
+    border: 1.5px solid black;
+    box-shadow:10px 10px 5px 0;
+}
+#box5:hover{
+    background-color: forestgreen;
+    height:100%;
+    width: 33%;
+    border: 1.5px solid black;
+    box-shadow:10px 10px 5px 0;
+}
+#box6:hover{
+    background-color: chartreuse;
+    height:100%;
+    width: 33%;
+    border: 1.5px solid black;
+    box-shadow:10px 10px 5px 0;
+}
