@@ -48,21 +48,20 @@ function battleLoop(enemy){
             }if(enemy.health <= 0){
                 console.log("\nGUIDE: TOOK HIM DOWN WHEWWWWWWW! FREAKING EXHILIRATING!!!!!!!!!!!! Good shooting. You sure you havn't been on a mission before?`")    
                 battleOver = true
-        }else if(userChoice === 1){
-                user.ship.speed--
-                console.log("\nGUIDE: You got past the enemy, but it will cost you a ship speed point")
-                enemy.health = 0
-                battleOver = true
-                
-        }else if(userChoice === 2){
-                console.log("\nGUIDE: you used one of your ship cannons to defeat the enemy")
-                user.ship.cannon--
-                user.galaxyCrystals.push(enemy.galaxyCrystal)
-                battleOver = true
-                console.log(user)
-                
-            }
-        } 
+            } 
+    }else if(userChoice === 1){
+        user.ship.speed--
+        console.log("\nGUIDE: You got past the enemy, but it will cost you a ship speed point")
+        enemy.health = 0
+        battleOver = true
+    }else if(userChoice === 2){
+            console.log("\nGUIDE: you used one of your ship cannons to defeat the enemy")
+            user.ship.cannon--
+            user.galaxyCrystals.push(enemy.galaxyCrystal)
+            battleOver = true
+            console.log(user)
+            
+        }
     }
 }
 
@@ -96,6 +95,7 @@ function battleLoop2(enemy){
             }if(user.weapon.rounds === 0 && user.ship.speed === 0){
                 user.ship.cannon--
                 user.galaxyCrystals.push(enemy.galaxyCrystal)
+                battleOver = true
                 console.log("\n\nGUIDE: WE had to use a ship cannon! ")        
             }if(enemy.health < 40){
                 user.ship.durability--
@@ -117,11 +117,10 @@ function battleLoop2(enemy){
                 console.log("\nGUIDE: TOOK HIM DOWN WHEWWWWWWW! FREAKING EXHILIRATING!!!!!!!!!!!! Good shooting. You sure you havn't been on a mission before?`")    
                 battleOver = true
         }else if(userChoice === 1){
-                user.ship.speed--
-                console.log("\nGUIDE: You got past the enemy, but it will cost you a ship speed point")
-                enemy.health = 0
-                battleOver = true
-                
+            user.ship.speed--
+            console.log("\nGUIDE: You got past the enemy, but it will cost you a ship speed point")
+            enemy.health = 0
+            battleOver = true
         }else if(userChoice === 2){
                 console.log("\nGUIDE: you used one of your ship cannons to defeat the enemy")
                 user.ship.cannon--
@@ -129,10 +128,10 @@ function battleLoop2(enemy){
                 battleOver = true
                 console.log(user)
                 
-            }
-        } 
+            } 
+        }
     }
-}
+}           
 
 
     function Enemy(name,health,attackPower,galaxyCrystal){
@@ -141,7 +140,7 @@ function battleLoop2(enemy){
         this.galaxyCrystal = galaxyCrystal
         this.attackPower = attackPower
         this.attackBack = function(){
-        return Math.floor(Math.random() * Number(this.attackPower))
+        return (Math.floor(Math.random() * 4) * Number(this.attackPower))
     }
 }
     
@@ -243,7 +242,7 @@ function battleLoop2(enemy){
                     user.ship.cannon--
                     user.ship.cannon--
                     console.log("\n\n GUIDE: Well, you used a 2 cannons, but we got past the enemy and we are on our way")
-                    user.galaxyCrystals.push(enemy.galaxyCrystal)
+                    user.galaxyCrystals.push(firstBoss.galaxyCrystal)
                     battleOver = true
                     if(user.ship.cannon === 0){
                         console.log("\n GUIDE: Our last resort was to use 2 speed points")
@@ -258,7 +257,7 @@ function battleLoop2(enemy){
                     console.log("\n\n GUIDE: We used 2 speed points to fly away!")
                     battleOver =true
                 }
-            }if(firstBoss.health< 55){
+            } else if(firstBoss.health< 55){
                 const enemyAttack = firstBoss.attackBack()
                 user.health -= enemyAttack
                 console.log(`${firstBoss.name} attacked ${user.name} for ${enemyAttack}!`)
@@ -266,14 +265,14 @@ function battleLoop2(enemy){
                 user.health -= (enemyAttack * .25)
                 console.log(`${firstBoss.name} attacked ${user.name} for ${enemyAttack}!`)
 
-            }if(firstBoss.health <= 0){
+            }else if(firstBoss.health <= 0){
                 console.log("\n\nGUIDE: YOU BARELY MADE IT! But, a boss down is a boss down")
                 battleOver = true
-            }if(user.health <= 0){
+            }else if(user.health <=0){
                 console.log("\n\nGUIDE: Its all good! Not eveyone can be a BOSS. Better Luck Next time kid.GAMEOVER")
                 battleOver = true
             }
-        }if(bossMove === 1 && user.ship.speed >= 2){
+        } else if(bossMove === 1 && user.ship.speed >= 2){
             user.speed--
             user.speed--
             console.log("\n\nGUIDE: WE used 2 speed points to get past the Boss!")
@@ -390,12 +389,83 @@ if(userWeapon === 0){
     user.weapon = rocketLauncher
 }
 
+console.log(`
+
+                                                       
+.*                                            
+#&#%#%%##%##%%######%%%&&%#/,.  .             
+%%%&###%%%&##########################%%,         
+/&%%&(          .%&%%###**(########################%#######&*     
+&#%##%#&###((&%#*#%&&###%(%&###################################%   
+%%%###%%%%%%(&&%#&&&&###%%%%#%&&&&&&&&&&&&&&&&&&&&&&&&%%%###&&%,   
+,%&&&&&*      .,*#&&&###%/*%#####################&%&&##&&&%&&&,    
+.&&&&&&&&&&&&&&&&&&&&&&&&&&&&&#*,,*(##%&&&%(      
+(&&&%%#&#%%%%%##&&&&&&&%%#/*,,,,,,*%&&&&#        
+  #%*#*##%%##(/***,,,,,,,(*,,**/###           
+               %&&&&//%#&&&&#**//&(/          
+                 .*%&,  (&&#(**//(&%          
+                    %%  %(((%,**//(%%         
+                    ..  %&&&##**///%((        
+                        &%%(##***//(&(.       
+                      (%&(((&#**/(&&(&        
+                      &&&#%&%&%&##&,          
+                     *#&&&%%#%%.              
+                      ,&#&(.                  
+                                              
+                                       
+
+
+`)
+
 console.log("\n\n HAROLD: Terrible Choice, but to each is own. Good luck tough guy!")
 console.log("\n\n\n")
 console.log(user)
 console.log("\n\n")
 console.log("GUIDE: Ok, now that you have selected your ship and weapon, we are about to begin our voyage.First, a little instruction.\n Above is your current user profile. You will be prompted a few times throughout the game to check your current stats.\n You will be given options, and you may encounter enemies. You may have noticed your ship has cannons. Each cannon is a one time use that destroys the current enemy you are battling completely. Use your cannons sparingly, as enemies are harder as the game goes on.\n Press any key to continue! ")
 
+console.log(`
+
+
+                                                           
+                                            ,@@@@@@@@                                              
+                                          @@##(     #@@.                                           
+                      */                 .@#########/ #@@.                                         
+                  *@@%###@@@@             @%#############@@                                        
+                @@##,      (##@@@         @&###############@@                                      
+               @@#################@@@     @@%###############%@%                                    
+              @@#####################%@@( @@%%#%%%%%%%%%%%%###@@                                   
+               @&#####%@@@@@@@###########@@@@@@@@@@@@@@@@@@@@@@@@@@&,                              
+                @@%#@@,,###/,,,@@@%&@@@@%/////////*@@&&&%.      *%&&&&&@@@@&                       
+                 @@@,(#####%%%&@@@////.    ///////@@&&&&&&&&&&&%.        /&&&@@@%                  
+                  @(%%##%%%@@@///,   */////////// @&&&&&&&&&&&&&&&&&&&(       #&&@@@               
+                   @%%%%@@@///  ////////////////.@@&&&&&&&&&&&&&&&&&&&&&&&&&&#    &&@@@            
+                   .@%@@(//.//////////////////// @@&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&  %&@@          
+                    #@(///////////////// @@@@@ / @&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&%  &&@@        
+                   @@##########////////////////* @&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&@@       
+                  (@@@&&@@@@@@@###/////**@@@@ // @@&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&@@      
+                  @#////////,  #@@##//////////// &@&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&@      
+                  @#//////////// (@&##//* %@@( /  @@&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&@      
+                  @@#////////////* #@@###//////// *@&&&.&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&@      
+                   @##(/////////////  @@@%#########%@&&&#   *%&&&&&&&&&&&&%%#//%&&&&&&@@&%&@*      
+                 @@@####%@@@@@@@&/////*   @@@@@&%%%%@@@&&&&%.      /&&&&&&&&&&@@@@@(////(#@#       
+              @@&##          (####%@@@%////.           @@@&&&&&&&&&&&&&@@@@@%  ,//////##@@         
+           *@@## ###############,  (###%@@#////////////   .@@@@@@@@@*     /////////(##@@           
+          @@###############################@@//////////////.      ,/////////////###&@@             
+        /@###################################@@///////////////////////////######@@@                
+        @&%####################################@@#(///////////((###########@@@@                    
+        @@%%%#########################%%%%%%%%%%@@#################&@@@@@(                         
+         @@%%%%%%#####%%%%%%%%%%%%%%%%%%%%&@@@@@@@@@@@@@@@@@@@&(                                   
+           @@&%%%%%%%%%%%%%%%%%&@@@@@@@@&%%%%%%%&@@@.                                              
+              @@@@@@@@@@@@&/    @@@%%%%%%%%&@@@#                                                   
+                                   /@@@@@@/                                                        
+                                                                 
+
+
+
+
+
+
+`)
 while(!gameOver1){
     const userStart = readline.keyInSelect(["Lets do it!", "No, Im a pansy"], "GUIDE: Ok Are you ready ???")
     if(userStart === 0){
@@ -426,8 +496,11 @@ while(!gameOver2){
             hyperBoost2()
         }
     console.log("\n\n GUIDE: Ok We are really doing this, Gaurdians of the Galaxy style, que the good music!") 
-    console.log("if you would like to check out your stats at the moment, press the space bar!") 
-    
+    const displayUser = readline1.keyIn('\n\nGUIDE: you should check your stats! Press 1 to do so! ',
+  {limit: '$<1>'});
+        if(displayUser === 1){
+            console.log(user)
+        }
     const level2Round2 = readline.keyInSelect(["boost", "hyperBoost"], "GUIDE: That inevitable time again. You know the drill. WE gotta get there somehow.")
         if(level2Round2 === 0){
             boost2()
@@ -437,6 +510,28 @@ while(!gameOver2){
     console.log("\n\n GUIDE: WOOOOOWWWWWWW You are still alive. One final push. You sure you dont want to give up?\n\n We can die here in space ! IM down")
     userBossAnswer = readline.keyInSelect(["bring it on!"], "Whats it gonna be?") 
         if(userBossAnswer === 0){
+            console.log(`
+            
+            
+            
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄               ▄  ▄               ▄  ▄         ▄       ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄       ▄▄▄▄▄▄▄▄▄▄▄  ▄    ▄  ▄         ▄  ▄            ▄            ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
+ ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌             ▐░▌▐░▌             ▐░▌▐░▌       ▐░▌     ▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌     ▐░░░░░░░░░░░▌▐░▌  ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌          ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+ ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀█░▌ ▐░▌           ▐░▌  ▐░▌           ▐░▌ ▐░▌       ▐░▌      ▀▀▀▀█░█▀▀▀▀ ▐░▌       ▐░▌▐░█▀▀▀▀▀▀▀▀▀      ▐░█▀▀▀▀▀▀▀▀▀ ▐░▌ ▐░▌ ▐░▌       ▐░▌▐░▌          ▐░▌          ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▐░▌       ▐░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░▌       ▐░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌
+ ▐░▌       ▐░▌▐░▌       ▐░▌  ▐░▌         ▐░▌    ▐░▌         ▐░▌  ▐░▌       ▐░▌          ▐░▌     ▐░▌       ▐░▌▐░▌               ▐░▌          ▐░▌▐░▌  ▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌          ▐░▌       ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌
+ ▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄█░▌   ▐░▌       ▐░▌      ▐░▌       ▐░▌   ▐░█▄▄▄▄▄▄▄█░▌          ▐░▌     ▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄      ▐░█▄▄▄▄▄▄▄▄▄ ▐░▌░▌   ▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌          ▐░█▄▄▄▄▄▄▄█░▌▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌
+ ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌    ▐░▌     ▐░▌        ▐░▌     ▐░▌    ▐░░░░░░░░░░░▌          ▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌     ▐░░░░░░░░░░░▌▐░░▌    ▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌          ▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+ ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌     ▐░▌   ▐░▌          ▐░▌   ▐░▌      ▀▀▀▀█░█▀▀▀▀           ▐░▌     ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀       ▀▀▀▀▀▀▀▀▀█░▌▐░▌░▌   ▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌          ▐░█▀▀▀▀█░█▀▀ ▐░▌       ▐░▌ ▀▀▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀█░█▀▀ 
+ ▐░▌          ▐░▌       ▐░▌      ▐░▌ ▐░▌            ▐░▌ ▐░▌           ▐░▌               ▐░▌     ▐░▌       ▐░▌▐░▌                         ▐░▌▐░▌▐░▌  ▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌          ▐░▌     ▐░▌  ▐░▌       ▐░▌          ▐░▌▐░▌       ▐░▌▐░▌          ▐░▌     ▐░▌  
+ ▐░▌          ▐░▌       ▐░▌       ▐░▐░▌              ▐░▐░▌            ▐░▌               ▐░▌     ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄       ▄▄▄▄▄▄▄▄▄█░▌▐░▌ ▐░▌ ▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄▄▄ ▐░▌      ▐░▌ ▐░█▄▄▄▄▄▄▄█░▌ ▄▄▄▄▄▄▄▄▄█░▌▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░▌      ▐░▌ 
+ ▐░▌          ▐░▌       ▐░▌        ▐░▌                ▐░▌             ▐░▌               ▐░▌     ▐░▌       ▐░▌▐░░░░░░░░░░░▌     ▐░░░░░░░░░░░▌▐░▌  ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌
+  ▀            ▀         ▀          ▀                  ▀               ▀                 ▀       ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀    ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀ 
+                                                                                                                                                                                                                                                                                      
+ 
+            
+            
+     
+            `)
+    
             level2bBattle()
         }
     console.log("\n\n GUIDE: You really beat the boss! The one and only SKULLCRUSHER! You should check your stats.\n\n I cant wait to tell ole Harold about this one! ")

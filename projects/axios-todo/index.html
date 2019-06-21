@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel = "stylesheet" href = "style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <header id = "todoHeader">
             
         <h1 id = "heading">Aaron's To-Do List</h1>
+        <div style="height:100%; display: flex; justify-content: center; align-items: center; padding:20%;;position:relative;"><iframe src="https://giphy.com/embed/l2SqieNX0V8NvennO" width="50%" height="50%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
     </header>
     <section id = "addTodo">
+        <h2 id = "postTitle">New Item to List</h2>
             <form id = "todoForm" name = "addItems">
-                <h2 id = "postTitle">New Item to List</h2>
-                <input type = "text" name ="title" placeholder = "list title">
+                <input type = "text"  name ="title" placeholder = "list title">
                 <input type = "text"  name = "description" placeholder = "description"> 
                 <input type = "number" name = "price" placeholder = "price ">
                 <input type = "url" name = "imgUrl" placeholder = "URL">
+                <button type = "submit"  name = "submitButton"><img src = "clickHere.png" id = "buttonStyle"></button>
             </form>
         </section>
     <section id = "actualList">
 
     </section>
+    
     
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src = "app.js"></script>

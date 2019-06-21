@@ -78,7 +78,7 @@ console.log(fruitArray)*/
 console.log(nameArray);
 console.log(occupationsArray);*/
 
-/*var peopleArray = [
+var peopleArray = [
     {
       name: "Harrison Ford",
       occupation: "Actor"
@@ -98,12 +98,12 @@ console.log(occupationsArray);*/
   ]
   var everyOtherName = []
   var everyOtherOccupation = []
-  for(i = 0; i<peopleArray.length; i += 2){
-      everyOtherName.push(peopleArray[i].name)
+  for(i = 1; i<peopleArray.length; i += 2){
+      everyOtherName.push(peopleArray[i - 1].name)
       everyOtherOccupation.push(peopleArray[i].occupation)
   }
 console.log(everyOtherName);
-console.log(everyOtherOccupation);*/
+console.log(everyOtherOccupation);
 
 /*var matrix = []
 for( i = 0; i < 3; i++){

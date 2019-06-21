@@ -1,0 +1,12 @@
+#countDisplay{
+    width: 150px;
+    height: 150px;
+    border: 5px inset lightseagreen;
+}
+#coHead{
+    font-style: italic;
+}
+#timeUp{
+    color: firebrick;
+    font-size: 250%
+}

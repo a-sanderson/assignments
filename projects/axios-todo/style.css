@@ -2,6 +2,10 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+h1{
+    font-family: "Roboto Condensed";
+    font-size: 250%
+}
 #todoHeader{
     grid-column: 1/4;
     grid-row: 1/2;
@@ -13,22 +17,69 @@ body{
     grid-column:1/4;
     border: 4px ridge slategray;
     display:flex;
+    flex-direction: column;
     height: 85vh;
 }
 .listDividers{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 2px inset beige;
+    border: 3px inset beige;
     margin: 4px;
-    height: 10%;
-    width: 100%;
+    padding: 4px;
+    width: auto;
+    height: 15%;
+}
+.listDividers >div{
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items:center
+}
+.listDividers >div>img{
+    height:100px;
+}
+.listDividers > h2{
+    font-family: "Roboto Condensed", sans-serif;
 }
 #addTodo{
     grid-column: 1/4;
     grid-row: 2/3;
-   
+    background-color: lightskyblue;
+    border: 3px darkgrey ridge;
+    transition: padding, border ease-out 1s;
+    box-shadow: none;
 }
+#addTodo >h2{
+    margin: auto;
+}
+#addTodo > h2:hover{
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+#todoForm{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+}
+#todoForm:hover{
+    display: flex;
+    flex-direction: column;
+    
+}
+#todoForm > input{
+    height: 30px;
+    margin-bottom: 12px;
+}
+
+
+#addTodo:hover{
+    padding: 80px;
+    border: 7px darkgrey ridge;
+    box-shadow: 5px 10px black;
+}
+
 .lineThru{
     text-decoration: line-through;
     text-decoration-color: firebrick;
@@ -37,4 +88,38 @@ body{
 .toDoListTitle{
     color: black;
     font: arial;
+    
+}
+form >button{
+    background: none;
+    border: none;
+}
+div > div > button{
+    height: 20%;
+    border-radius: 8px;
+    color: blue;
+    margin-bottom:10px;
+}
+.picContainer{
+    display: content;
+    justify-content: center;
+    align-content: center;
+}
+#buttonStyle{
+    height: 80px;
+}
+#buttonStyle:hover{
+    height: 100%;
+}
+.onEdit{
+    display:none;
+}
+.onToggle{
+    display:relative;
+}
+.putButton{
+    height: 42px;
+    width: 20%;
+    background-color: lightgrey;
+    border-radius: 5px;
 }
