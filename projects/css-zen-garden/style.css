@@ -1,0 +1,11 @@
+#bodyDiv{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+#div1{
+    grid-column: 1/4;
+    background:#2d6360 50% 0 url(huntington.jpg) no-repeat;
+    height: 250px;
+
+}

@@ -1,4 +1,5 @@
 getData();
+
 const actualList = document.getElementById("actualList")
 const addTodoForm = document.addItems
 addTodoForm.addEventListener("submit",(event)=>{
@@ -121,11 +122,12 @@ function displayData(arr){
             .catch(error => console.log(error))
       })
       checkBox.setAttribute("type", "checkbox")
+      checkBox.checked = obj.completed
       checkBox.addEventListener("click", function(){
-          h2.classList.add("lineThru")
-          axios.put("https://api.vschool.io/Aaron/todo/" + obj._id, {
-              completed: true,
-                })
+          const updates = {
+            completed: !obj.completed
+          }
+          axios.put("https://api.vschool.io/Aaron/todo/" + obj._id, updates)
           .then(response => {
               console.log(response);
           })
@@ -133,6 +135,9 @@ function displayData(arr){
               console.log(err);
           });
       })
+      if(obj.completed = true){
+        h2.classList.add("lineThru")
+      }
       checkBox2.setAttribute("type", "checkbox")
       //appended elements
       actualList.appendChild(div)
@@ -168,3 +173,80 @@ axios.get("https://api.vschool.io/Aaron/todo")
     console.log(error);
   })
 } 
+// const searchForm = document.searchBar
+// const searchInput = searchForm.searchInput
+
+
+// function filterSearch(){
+//   axios.get("https://api.vschool.io/Aaron/todo")
+//       .then( (response) => {
+//       const todoArr = response.data
+//       console.log("test")
+//       console.log(todoArr)
+//       let newArr = filterTodo(todoArr)
+//       console.log(newArr)
+//    })
+//     .catch(function (error) {
+//       console.log(error);
+//     })
+//   } 
+
+
+
+
+
+// function filterTodo(arr){
+//   const str = searchInput.value
+//   const searchPattern = (str, "gi")
+//   const filterArr = arr.filter(obj => {
+//     if(obj.title.match(searchPattern)){
+//       return obj
+//     }
+//   })
+//   filterArr.forEach(obj =>{
+//   const div = document.createElement("div")
+//   const picContainer = document.createElement("div")
+//   const div2 = document.createElement("div")
+//   const checkBox = document.createElement("input")
+//   const h2 = document.createElement("h2")
+//   const div3 = document.createElement("div")
+//   const checkBox2 = document.createElement("input")
+//   const div4 = document.createElement("div")
+//   const p = document.createElement("p")
+//   const p2 = document.createElement("p")
+//   const img = document.createElement("img")
+//   const deleteBtn = document.createElement("button")
+//   const editBtn = document.createElement("button")
+
+//   //edit elements for filtered objects
+//   deleteBtn.textContent="Delete From List"
+//   div.classList.add("listDividers")
+//   picContainer.classList.add("picContainer")
+//   p.textContent = "Mark as Complete"
+//   p2.textContent = "Mark as Incomplete "
+//   h2.textContent = obj.title
+//   h2.classList.add("toDoListTitle")
+//   img.setAttribute("src", obj.imgUrl)
+//   editBtn.textContent= "Edit this Listing"
+//   checkBox2.setAttribute("type", "checkbox")
+//       //appended elements
+//   actualList.appendChild(div)
+//   div.appendChild(h2)
+//   div.appendChild(picContainer)
+//   picContainer.appendChild(img)
+//   div.appendChild(div2)
+//   div2.appendChild(p)
+//   div2.appendChild(checkBox)
+//   div.appendChild(div3)
+//   div3.appendChild(p2)
+//   div3.appendChild(checkBox2)
+//   div.appendChild(div4)
+//   div4.appendChild(deleteBtn)
+//   div4.appendChild(editBtn)
+//   })
+//  }
+
+// searchForm.addEventListener("submit", function(event){
+//   event.preventDefault()
+//   filterSearch()
+// })
