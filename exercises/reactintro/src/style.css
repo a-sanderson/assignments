@@ -1,0 +1,69 @@
+.navClass{
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: lightgray
+
+}
+nav > span{
+    color: green;
+    font-size: 150%;
+    border: 3px solid black;
+    padding: 4px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 7px;
+    font-family:"Oswald", sans-serif;
+
+}
+.homeTitle{
+    font-family:"Permanent Marker", cursive;
+    font-size: 300%;
+}
+.centerItems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 6px black ridge;
+}
+#main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+#picContainer{
+    display: flex;
+    justify-content: space-evenly;
+    grid-column: 1/4;
+
+}
+#imageHolder{
+    border-right: gray 4px inset;
+}
+#climbingGuy{
+    margin-right: 2px;
+    opacity: .8;
+}
+.pStyle{
+    font-family: "oswald", sans-serif;
+    font-size: 115%
+}
+#jcFooter{
+    display: flex;
+    justify-content: space-between;
+    background-color:grey;
+    height: 15vh;
+}
+#socialMedia{
+    display:flex;
+    justify-Content:space-evenly;
+}
+#contactBox{
+    border: 3px black inset;
+    color: white;
+}
+.imageSize{
+    height: 100%;
+
+}
