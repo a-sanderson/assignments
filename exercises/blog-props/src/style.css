@@ -1,0 +1,88 @@
+#cardContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    /* width: 500px; */
+    border: 1px lightgray ridge;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    transition: 0.3s box-shadow;
+
+}
+.nav{
+    height: 10%;
+    width:100%;
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color:white;
+    z-index: 2;
+}
+.menuContainer{
+    height:45px;
+    width: 80px;
+}
+.hamburger{
+    height: 100%;
+    width: 100%;
+}
+.headerClass{
+    height: 55vh;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center !important;
+    background-image: url("http://d2vision.com/blog/img/home-bg.jpg");
+    background-size: cover;
+    z-index: 0;
+    margin-bottom: 2px;
+
+
+}
+.title{
+    color:white;
+    font-size: 50px;
+    z-index: 6;
+}
+.headerClass > div>h1,h3{
+    color:white;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.1;
+    display: block;
+    margin: 10px 0 0;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+.headTitle{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    z-index: 4;
+    margin-top: 100px;
+    font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #212529;
+    opacity: .5;
+    z-index: 1;
+
+}
+.postTitle{
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    line-height: 1.2;
+
+}
+.postSub{
+    font-weight: 300;
+    margin: 0 0 10px;
+    line-height: 1.2;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
