@@ -58,7 +58,7 @@ body{
 #navStyle{
     background-color:lightgray;
     padding: 2%;
-    z-index: 1;
+    /* z-index: 1; */
     
 }
 #navList{

@@ -1,0 +1,13 @@
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+    border-bottom: 3px ridge black;
+}
+
+a{
+    text-decoration: none;
+}

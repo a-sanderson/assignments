@@ -1,0 +1,65 @@
+@mixin pageStyle {
+    height: 100vh;
+    width: 100vw;
+}
+@mixin imageFit {
+    height: 100%;
+    width: 100%;
+}
+
+.about{
+    background-image: url("https://pics.me.me/meth-is-a-hell-of-a-drug-funny-14030499.png");
+    background-size: cover;
+    @include pageStyle;
+}
+.contact{
+    @include pageStyle;
+
+}
+.home{
+    @include pageStyle;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    height: 10vh;
+    border-bottom: 3px ridge black;
+    a{
+        color: firebrick;
+        text-decoration:none;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+.walterBox{
+    display:flex;
+    height: 40%;
+    width:100%;
+    p{
+        margin-left: 10px;
+        font-size: 1.8em;
+        line-height: 1.5em;
+        width: 75%;
+
+    }
+}
+.imageContainer{
+    width: 50%;
+    height: 100%;
+    img{
+        @include imageFit;
+    }
+}
+.titleContainer{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    margin-bottom: 10%;
+    h1{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 400%;
+    }h2{
+        font-size: 275%;
+        font-style: italic;
+    }
+}
